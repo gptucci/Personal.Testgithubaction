@@ -16,21 +16,21 @@ jobs:
       - name: Check out code 🛎
         uses: actions/checkout@v2
       
-      - name: Setup .NET 5 🔧
+      - name: Setup .NET 6 🔧
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Restore dependencies 🛠
-        working-directory: /Src
+        working-directory: ./Src
         run: dotnet restore
       
       - name: Build app 🚀
-        working-directory: /Src
+        working-directory: ./Src
         run: dotnet build -c Release --no-restore
 
       
 
       - name: Publish app 📰
-        working-directory: /Src
+        working-directory: ./Src
         run: dotnet publish -c Release -o ./out
