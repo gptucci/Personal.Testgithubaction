@@ -3,7 +3,7 @@ name: Continuous Integration and Deployment
 on:
   push:
     branches:
-      - main # il tutto parte con puch nel branch master 
+      - main # il tutto parte con push nel branch master o main
 
 env:
   DOTNET_VERSION: '6.0.x'
