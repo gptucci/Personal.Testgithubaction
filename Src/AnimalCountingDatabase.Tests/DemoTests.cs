@@ -2,7 +2,6 @@ using AnimalCoutingDatabase.Api;
 using AnimalCoutingDatabase.Api.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -22,7 +21,7 @@ namespace AnimalCountingDatabase.Tests
         {
             // Create DB Context
             var configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("appsettings1.json")
                 .AddEnvironmentVariables()
                 .Build();
 
